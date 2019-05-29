@@ -1,0 +1,45 @@
+$primary_color: #000;
+$second_color: #fff;
+
+a {
+    font-weight: 600;
+}
+
+.brand-wrapper {
+    background-color: $primary_color;
+    display: flex;
+    /* establish flex container */
+    align-items: center;
+    /* center ul container vertically */
+    justify-content: center;
+}
+
+.navbar {
+    
+    padding: 0;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color: $second_color;
+    margin-right: 0px;
+    padding: 15px 5px 15px 15px;
+}
+
+.dropdown-menu {
+    background-color: $primary_color;
+}
+
+.dropdown-item {
+    color: $second_color;
+}
+
+.navbar-toggler {
+    margin-left: 1rem;
+}
+
+.brand-wrapper img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
