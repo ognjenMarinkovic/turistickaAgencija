@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { GalerijaComponent } from './galerija/galerija.component';
 import { VodicComponent } from './vodic/vodic.component';
 import { VestiComponent } from './vesti/vesti.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { AddPlaceFormComponent } from './add-place-form/add-place-form.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,11 @@ import { KontaktComponent } from './kontakt/kontakt.component';
     GalerijaComponent,
     VodicComponent,
     VestiComponent,
-    KontaktComponent
+    KontaktComponent,
+    AddPlaceFormComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],

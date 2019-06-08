@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>Hero Form</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" id="location" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description">
+    </div>
+    <div class="form-group">
+      <label for="latitude">Latitude</label>
+      <input type="text" class="form-control" id="latitude">
+    </div>
+    <div class="form-group">
+      <label for="longitude">Longitude</label>
+      <input type="text" class="form-control" id="longitude">
+    </div>
+    
+    <div class="form-group">
+      <label for="url">URL</label>
+      <input type="text" class="form-control" id="url">
+    </div>
+
+    <div class="form-group">
+      <label for="link">Google maps link</label>
+      <input type="text" class="form-control" id="link">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </form>
+</div>
+
+new Place("Lepenski vir",
+        "Donjeg Milanovca",
+        "Aheološko nalazište Lepenski vir je otkriveno 1965. godine, na samoj obali Dunava, i udaljeno je 15 km od Donjeg Milanovca. To je bilo jedno od najznačajnijih otkrića ove vrste na teritoriji Srbije. Kultura Lepenskog Vira je stara oko 8000 godina i predstavljala je potpunu nepoznanicu za arheologe, a nazvana je po lokaciji na kojoj je otkrivena.",
+        44.5564639,
+        22.0243296,
+        "././assets/img/Lepenski-vir/1.JPG",
+        "https://www.google.com/maps/place/Lepenski+vir/@44.5564601,22.0243349,17z")
