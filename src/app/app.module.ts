@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,7 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { AddPlaceFormComponent } from './add-place-form/add-place-form.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
+import { MapaMarkerComponent } from './mapa/mapa-marker/mapa-marker.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AgmCoreModule } from '@agm/core';
     VestiComponent,
     KontaktComponent,
     MapaComponent,
-    AddPlaceFormComponent
+    AddPlaceFormComponent,
+    MapaMarkerComponent
   ],
   imports: [
     FormsModule,
@@ -36,7 +39,8 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDdCvAo9HztNq7CFBRcid3l8ap8bEiGM3E'})
+      apiKey: 'AIzaSyDdCvAo9HztNq7CFBRcid3l8ap8bEiGM3E'}),
+      HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

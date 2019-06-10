@@ -1,5 +1,16 @@
-<agm-map (mapClick)=mapClick() [usePanning]="true" [latitude]="map.lat" [longitude]="map.lng" [zoom]="11" > 
-    <agm-marker (markerClick)="clickedMarker(place.latitude, place.longitude)" (markerClick)=markerClick(iw) *ngFor = "let place of this.places" [latitude]="place.latitude" [longitude]="place.longitude">
+<agm-map 
+        (mapClick)=mapClick()
+        [usePanning]="true"
+        [latitude]="map.lat"
+        [longitude]="map.lng"
+        [zoom]="map.zoom" 
+> 
+    <agm-marker (markerClick)="clickedMarker(place.latitude, place.longitude)" 
+                (markerClick)=markerClick(iw)
+                *ngFor = "let place of this.places" 
+                [latitude]="place.latitude" 
+                [longitude]="place.longitude"
+                >
         <agm-info-window #iw [disableAutoPan]="true" [maxWidth]="250">
             <div class="marker-picture">
                 <img src="{{place.url}}">
