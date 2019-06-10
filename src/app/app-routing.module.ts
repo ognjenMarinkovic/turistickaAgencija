@@ -18,6 +18,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
 export const AppRouting = RouterModule.forRoot(routes, { 
   useHash: true
 });
