@@ -51,14 +51,15 @@
       "link": "http://bit.ly/2KcZYo7"
     },
     { 
+      "id": "6",
       "name": "Crkva Svetih apostola Petra i Pavla",
       "location": "Majdanpek",
       "description": "Crkva Svetih apostola Petra i Pavla izgrađena je u periodu od 1856-1858. godine od strane srpske Vlade koja je dovela stručnjake i radnike iz inostranstva, za rad u obnovljenom rudniku. Stvarajući uslove da ih veže za srpsko tle i pravoslavlje 1856. godine istovremeno je započela gradnja crkve, škole, stambenih objekata i rudarskih postrojenja.",
       "latitude": 44.4213006,
       "longitude": 21.9364545,
       "url": "././assets/img/Crkva-Svetih-Apostola-Petra-I-Pavla/1.jpg",
-      "link": "http://bit.ly/2wO02C0",
-      "id": "McPC6eE"
+      "link": "http://bit.ly/2wO02C0"
+      
     }
   ]
 }

@@ -2,6 +2,7 @@
   <table class="table table-striped">
     <thead class="thead-dark">
       <tr>
+        <th scope="col">ID</th>
         <th scope="col">Name</th>
         <th scope="col">Location</th>
         <th scope="col">Latitude</th>
@@ -12,6 +13,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let place of this.places">
+        <td scope="col">{{place.id}}</td>
         <td scope="col">{{place.name}}</td>
         <td scope="col">{{place.location}}</td>
         <td scope="col">{{place.latitude}}</td>
