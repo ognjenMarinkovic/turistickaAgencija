@@ -1,0 +1,24 @@
+<div style="overflow-x:auto;">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Latitude</th>
+        <th scope="col">Longitude</th>
+        <th scope="col">Url</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let place of this.places">
+        <td scope="col">{{place.name}}</td>
+        <td scope="col">{{place.location}}</td>
+        <td scope="col">{{place.latitude}}</td>
+        <td scope="col">{{place.longitude}}</td>
+        <td scope="col">{{place.url}}</td>
+        <td scope="col">{{place.link}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

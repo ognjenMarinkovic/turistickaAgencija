@@ -26,7 +26,7 @@ export class MapaComponent implements OnInit {
   }
 
   clickedMarker(latitude: number, longitude: number) {
-    this.map.lat = latitude+0.01;
+    this.map.lat = latitude+0.02;
     this.map.lng = longitude;
     this.map.zoom = 13;
   }
@@ -52,4 +52,8 @@ export class MapaComponent implements OnInit {
     }
     this.previousIW = infoWindow;
   }
+  addPlace(place: Place){
+    this.placeService.addPlace(place).subscribe(place => {this.places.push(place);});
+  }
+  
 }

@@ -15,4 +15,8 @@ export class PlaceService {
   getPlaces():Observable<Place[]>{
     return this.http.get<Place[]>(this.placeUrl);
   }
-}
+
+  addPlace(place: Place):Observable<Place>{
+    return this.http.post<Place>(this.placeUrl, place);
+  }
+} 

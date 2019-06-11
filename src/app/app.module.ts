@@ -17,7 +17,7 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { AddPlaceFormComponent } from './add-place-form/add-place-form.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
-import { MapaMarkerComponent } from './mapa/mapa-marker/mapa-marker.component';
+import { PlaceTableComponent } from './place-table/place-table.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { MapaMarkerComponent } from './mapa/mapa-marker/mapa-marker.component';
     KontaktComponent,
     MapaComponent,
     AddPlaceFormComponent,
-    MapaMarkerComponent
+    PlaceTableComponent
   ],
   imports: [
     FormsModule,

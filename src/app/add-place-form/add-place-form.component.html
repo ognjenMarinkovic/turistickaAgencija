@@ -1,42 +1,41 @@
-
+<app-place-table></app-place-table>
 <div class="container">
   <h2>Dodavanje lokacije</h2>
-  <form (ngSubmit)="onSubmit(name,location,description,latitude,longitude,url,link)" #heroForm="ngForm">
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
     <div class="form-group">
-      <label for="name">Ime</label>
-      <input type="text" class="form-control" id="name" required>
+      <label>Ime</label>
+      <input name="name" [(ngModel)]="name" type="text" class="form-control" required>
     </div>
     <div class="form-group">
-      <label for="location">Mesto</label>
-      <input type="text" class="form-control" id="location" required>
-    </div>
-
-    <div class="form-group">
-      <label for="description">Opis</label>
-      <input type="text" class="form-control" id="description">
-    </div>
-    <div class="form-group">
-      <label for="latitude">Latitude</label>
-      <input type="text" class="form-control" id="latitude">
-    </div>
-    <div class="form-group">
-      <label for="longitude">Longitude</label>
-      <input type="text" class="form-control" id="longitude">
-    </div>
-    
-    <div class="form-group">
-      <label for="url">URL</label>
-      <input type="text" class="form-control" id="url">
+      <label>Mesto</label>
+      <input [(ngModel)]="location" name="location" type="text" class="form-control" required>
     </div>
 
     <div class="form-group">
-      <label for="link">Google maps link</label>
-      <input type="text" class="form-control" id="link">
+      <label>Opis</label>
+      <input name="description" [(ngModel)]="description" type="text" class="form-control" required>
     </div>
-  
+    <div class="form-group">
+      <label>Latitude</label>
+      <input [(ngModel)]="lat" name="latitude" type="number" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Longitude</label>
+      <input [(ngModel)]="lng" name="longitude" type="number" class="form-control" required>
+    </div>
 
-    <button type="button" class="btn btn-default" (click)="newPlace();">New Hero</button>
+    <div class="form-group">
+
+      <input [(ngModel)]="url" name="url" type="text" class="form-control" placeholder="URL" required>
+    </div>
+
+    <div class="form-group">
+      <label>Google maps link</label>
+      <input [(ngModel)]="link" name="link" for="link" type="text" class="form-control" placeholder="LINK" required>
+    </div>
+
+
+    <input type="submit" value="Submit" class="btn btn-default">
 
   </form>
 </div>
-
