@@ -1,41 +1,41 @@
-<app-place-table></app-place-table>
 <div class="container">
   <h2>Dodavanje lokacije</h2>
-  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <form >
     <div class="form-group">
       <label>Ime</label>
-      <input name="name" [(ngModel)]="name" type="text" class="form-control" required>
+      <input [(ngModel)]="placeDetails.name" name="name" type="text" class="form-control" required>
     </div>
     <div class="form-group">
       <label>Mesto</label>
-      <input [(ngModel)]="location" name="location" type="text" class="form-control" required>
+      <input [(ngModel)]="placeDetails.location" name="location" type="text" class="form-control" required>
     </div>
 
     <div class="form-group">
       <label>Opis</label>
-      <input name="description" [(ngModel)]="description" type="text" class="form-control" required>
+      <input [(ngModel)]="placeDetails.description" name="description" type="text" class="form-control" required>
     </div>
     <div class="form-group">
       <label>Latitude</label>
-      <input [(ngModel)]="lat" name="latitude" type="number" class="form-control" required>
+      <input [(ngModel)]="placeDetails.latitude" name="latitude" type="text" class="form-control" required>
     </div>
     <div class="form-group">
       <label>Longitude</label>
-      <input [(ngModel)]="lng" name="longitude" type="number" class="form-control" required>
+      <input [(ngModel)]="placeDetails.longitude" name="longitude" type="text" class="form-control" required>
     </div>
 
     <div class="form-group">
-
-      <input [(ngModel)]="url" name="url" type="text" class="form-control" placeholder="URL" required>
+        <label>Picture path</label>
+      <input [(ngModel)]="placeDetails.url" name="url" type="text" class="form-control" required>
     </div>
 
     <div class="form-group">
       <label>Google maps link</label>
-      <input [(ngModel)]="link" name="link" for="link" type="text" class="form-control" placeholder="LINK" required>
+      <input [(ngModel)]="placeDetails.link" name="link" type="text" class="form-control" required>
     </div>
 
 
-    <input type="submit" value="Submit" class="btn btn-default">
+    <button class="btn btn-success btn-lg btn-block" (click)="addEmployee()">Submit</button>
 
   </form>
 </div>
+<app-place-table></app-place-table>

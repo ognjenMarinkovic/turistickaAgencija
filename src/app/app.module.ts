@@ -18,6 +18,7 @@ import { AddPlaceFormComponent } from './add-place-form/add-place-form.component
 import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
 import { PlaceTableComponent } from './place-table/place-table.component';
+import { PlaceUpdateComponent } from './place-update/place-update.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +32,15 @@ import { PlaceTableComponent } from './place-table/place-table.component';
     KontaktComponent,
     MapaComponent,
     AddPlaceFormComponent,
-    PlaceTableComponent
+    PlaceTableComponent,
+    PlaceUpdateComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDdCvAo9HztNq7CFBRcid3l8ap8bEiGM3E'}),

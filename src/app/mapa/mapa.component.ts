@@ -10,7 +10,7 @@ import { PlaceService } from '../services/place.service';
   styleUrls: ['./mapa.component.scss']
 })
 export class MapaComponent implements OnInit {
-  places: Place[];
+  places: any;
   currentIW: AgmInfoWindow;
   previousIW: AgmInfoWindow;
   
@@ -52,8 +52,5 @@ export class MapaComponent implements OnInit {
     }
     this.previousIW = infoWindow;
   }
-  addPlace(place: Place){
-    this.placeService.addPlace(place).subscribe(place => {this.places.push(place);});
-  }
-  
+ 
 }

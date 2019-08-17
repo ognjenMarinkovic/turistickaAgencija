@@ -1,5 +1,7 @@
-import { Component, OnInit, EventEmitter, Output, forwardRef} from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, forwardRef, Input} from '@angular/core';
 import { Place } from '../models/place'
+import { PlaceService } from '../services/place.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,36 +10,27 @@ import { Place } from '../models/place'
   styleUrls: ['./add-place-form.component.scss']})
 export class AddPlaceFormComponent implements OnInit {
   @Output() addPlace: EventEmitter<any> = new EventEmitter();
-
-  id: string;
-  name: string;
-  location: string;
-  lat: number;
-  lng: number;
-  url: string;
-  link: string;
-
-
-  constructor(){
-
-  }
-  
-  onSubmit(){
-    const place = {
-      id: this.id,
-      name: this.name,
-      location: this.location,
-      latitude: this.lat,
-      longitude: this.lng,
-      url: this.url,
-      link: this.link
-    }
-    this.addPlace.emit(place);
-    
+  @Input() placeDetails = {
+  id: '',
+  name: '',
+  location: '',
+  lat: 0,
+  lng: 0,
+  url: '',
+  link: ''
   }
 
-  ngOnInit(){
-    
+  constructor(
+    public placeService: PlaceService, 
+    public router: Router
+  ) { }
+
+  ngOnInit() { }
+
+  addEmployee(dataEmployee) {
+    this.placeService.createPlace(this.placeDetails).subscribe((data: {}) => {
+      this.router.navigate(['/listplaces'])
+    })
   }
 
 }

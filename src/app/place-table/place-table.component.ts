@@ -8,11 +8,28 @@ import { PlaceService } from '../services/place.service';
   styleUrls: ['./place-table.component.scss']
 })
 export class PlaceTableComponent implements OnInit {
+  Place: any = [];
   places: Place[];
-  constructor(private placeService: PlaceService) { }
+
+  constructor(public placeService: PlaceService) { }
 
   ngOnInit() {
-    this.placeService.getPlaces().subscribe(places => this.places = places);
+    this.loadPlaces()
   }
 
+  loadPlaces() {
+    return this.placeService.getPlaces().subscribe((data: {}) => {
+      this.Place = data;
+    })
+  }
+
+  
+  deletePlace(id) {
+    if (window.confirm('Are you sure, you want to delete?')){
+      this.placeService.deletePlace(id).subscribe(data => {
+        this.loadPlaces()
+      })
+    }  
+  }
+ 
 }
