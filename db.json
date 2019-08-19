@@ -59,6 +59,18 @@
       "longitude": 21.9364545,
       "url": "././assets/img/Crkva-Svetih-Apostola-Petra-I-Pavla/1.jpg",
       "link": "http://bit.ly/2wO02C0"
+    },
+    {
+      "id": "p8pV4ef",
+      "name": "Ski Centar Rajkovo",
+      "location": "Majdanpek",
+      "lat": 0,
+      "lng": 0,
+      "url": "",
+      "link": "http://bit.ly/2MqES6B",
+      "description": "Skijaliste na obodu Majdanpeka. Sadrzi 2 staze",
+      "latitude": "44.4319686",
+      "longitude": "21.9495234"
     }
   ]
 }

@@ -1,24 +1,24 @@
-<div style="overflow-x:auto;">
-  <table class="table table-striped">
+<div style="overflow-x:auto;" >
+  <table class="table table-striped w-auto">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Latitude</th>
-        <th scope="col">Longitude</th>
-        <th scope="col">Url</th>
-        <th scope="col">Link</th>
-        <th scope="col">Options</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th >Latitude</th>
+        <th>Longitude</th>
+        <th>Url</th>
+        <th>Link</th>
+        <th>Options</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let place of Place">
-        <td scope="col">{{place.name}}</td>
-        <td scope="col">{{place.location}}</td>
-        <td scope="col">{{place.latitude}}</td>
-        <td scope="col">{{place.longitude}}</td>
-        <td scope="col">{{place.url}}</td>
-        <td scope="col">{{place.link}}</td>
+      <tr  *ngFor="let place of Place">
+        <td >{{place.name}}</td>
+        <td >{{place.location}}</td>
+        <td >{{place.latitude}}</td>
+        <td >{{place.longitude}}</td>
+        <td >{{place.url}}</td>
+        <td >{{place.link}}</td>
         <td>
         <button class="edit" [routerLink]="['/updateplace/',place.id]">Edit</button>
         <button class="delete" (click)="deletePlace(place.id)">Delete</button>

@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AgmInfoWindow } from '@agm/core';
-import { Place } from '../models/place';
 import { PlaceService } from '../services/place.service';
 
 
@@ -14,17 +13,20 @@ export class MapaComponent implements OnInit {
   currentIW: AgmInfoWindow;
   previousIW: AgmInfoWindow;
   
+  
   map = {
-    lat: 44.403671,
-    lng: 21.7906629,
-    zoom: 10
+    lat: 44.473671,
+    lng: 21.9906629,
+    zoom: 11,
   }
+  
   constructor(
     private placeService: PlaceService
   ) {
     
   }
 
+  
   clickedMarker(latitude: number, longitude: number) {
     this.map.lat = latitude+0.02;
     this.map.lng = longitude;
@@ -43,6 +45,7 @@ export class MapaComponent implements OnInit {
     if (this.previousIW) {
       this.previousIW.close();
     }
+    
     this.map.zoom = 10;
   }
   markerClick(infoWindow) {

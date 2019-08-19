@@ -10,6 +10,7 @@ import { PlaceService } from '../services/place.service';
 export class PlaceTableComponent implements OnInit {
   Place: any = [];
   places: Place[];
+  
 
   constructor(public placeService: PlaceService) { }
 

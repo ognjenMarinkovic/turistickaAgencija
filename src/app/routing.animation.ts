@@ -12,7 +12,7 @@ export const routerTransition = trigger('routerTransition', [
       ], { optional: true }),
       query(':leave', [
         style({ transform: 'translateY(0%)' }),
-        animate('1s ease-in-out', style({ transform: 'translateY(100%)' }))
+        animate('1s ease-in-out', style({ transform: 'translateY(300%)' }))
       ], { optional: true }),
     ])
   ])

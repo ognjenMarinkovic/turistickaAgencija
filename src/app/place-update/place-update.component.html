@@ -1,45 +1,64 @@
-<div class="container custom-container">
-    <div class="col-md-12">
-      
-      <h3 class="mb-3 text-center">Update Place</h3>
+<div class="container">
+    <h2>Add place</h2>
+    <form novalidate>
+      <div class="form-group">
+        <input required minlength="3" maxlength="30" ngModel #nameControl="ngModel"
+          [(ngModel)]="placeData.name" name="name" type="text" class="form-control"
+          placeholder="Name">
+        <div class="alert alert-danger" *ngIf="nameControl.touched && !nameControl.valid">
+          <div *ngIf="nameControl.errors.required">Name is required.</div>
+          <div *ngIf="nameControl.errors.minlength">Name is minimum 3 characters.</div>
+          <div *ngIf="nameControl.errors.pattern">Name cannot have numbers.</div>
+        </div>
+      </div>
+  
   
       <div class="form-group">
-          <label>Ime</label>
-          <input type="text" [(ngModel)]="placeData.name" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Mesto</label>
-          <input type="text" [(ngModel)]="placeData.location" class="form-control" required>
-        </div>
-    
-        <div class="form-group">
-          <label>Opis</label>
-          <input type="text" [(ngModel)]="placeData.description" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Latitude</label>
-          <input type="text" [(ngModel)]="placeData.latitude" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label>Longitude</label>
-          <input type="text" [(ngModel)]="placeData.longitude" class="form-control" required>
-        </div>
-    
-        <div class="form-group">
-    
-          <input type="text" [(ngModel)]="placeData.url" class="form-control" placeholder="URL" required>
-        </div>
-    
-        <div class="form-group">
-          <label>Google maps link</label>
-          <input type="text" [(ngModel)]="placeData.link" class="form-control" placeholder="LINK" required>
-        </div>
-    
-    
-        <div class="form-group">
-            <button class="btn btn-success btn-lg btn-block" (click)="updatePlace()">Update Place</button>
+        <input required minlength="3" maxlength="20" ngModel #locationControl="ngModel" [(ngModel)]="placeData.location" name="location" type="text" class="form-control" placeholder="Location">
+        <div class="alert alert-danger" *ngIf="locationControl.touched && !locationControl.valid">
+            <div *ngIf="locationControl.errors.required">Name is required.</div>
+            <div *ngIf="locationControl.errors.minlength">Name is minimum 3 characters.</div>
           </div>
-      
-    </div>
+      </div>
+  
+      <div class="form-group">
+        <textarea maxlength="150" [(ngModel)]="placeData.description" name="description" type="text" class="form-control"
+          placeholder="Description" rows="3" ></textarea>
+      </div>
+  
+      <div class="row form-group">
+        <div class="col">
+          <input required pattern="-?\d{1,3}\.\d+" ngModel #latitudeControl="ngModel" [(ngModel)]="placeData.latitude"
+            name="latitude" type="text" class="form-control" placeholder="Latitude">
+            <div class="alert alert-danger" *ngIf="latitudeControl.touched && !latitudeControl.valid">
+                <div *ngIf="latitudeControl.errors.required">Latitude is required.</div>
+                <div *ngIf="latitudeControl.errors.pattern">Latitude doesn't match requirements.</div>
+              </div>
+        </div>
+        <div class="col">
+          <input  required pattern="-?\d{1,3}\.\d+" ngModel #longitudeControl="ngModel" [(ngModel)]="placeData.longitude" name="longitude" type="text" class="form-control"
+            placeholder="Longitude">
+            <div class="alert alert-danger" *ngIf="longitudeControl.touched && !longitudeControl.valid">
+                <div *ngIf="longitudeControl.errors.required">Longitude is required.</div>
+                <div *ngIf="longitudeControl.errors.pattern">Longitude doesn't match requirements.</div>
+              </div>
+        </div>
+      </div>
+      <div class="row form-group">
+          <div class="col">
+            <input [(ngModel)]="placeData.url" name="url" type="text" class="form-control" placeholder="Url">
+          </div>
+    
+          <div class="col">
+              <input  required pattern="https?://.+" ngModel #linkControl="ngModel" [(ngModel)]="placeData.link" name="link" type="text" class="form-control" placeholder="Link">
+              <div class="alert alert-danger" *ngIf="linkControl.touched && !linkControl.valid">
+                  <div *ngIf="linkControl.errors.required">Link is required.</div>
+                  <div *ngIf="linkControl.errors.pattern">Link doesn't match requirements.</div>
+                </div>
+          </div>
+        </div>
+  
+      <button class="btn btn-success btn-lg btn-block" (click)="updatePlace()">Submit</button>
+  
+    </form>
   </div>
-
