@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    height: calc(100vh - 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}

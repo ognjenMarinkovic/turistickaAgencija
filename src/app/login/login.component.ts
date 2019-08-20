@@ -18,17 +18,19 @@ export class LoginComponent implements OnInit {
   loginUser(event) {
     event.preventDefault()
     const target = event.target
-    const username = target.querySelector('#username').value
+    const email = target.querySelector('#email').value
     const password = target.querySelector('#password').value
 
-    this.Auth.getUserDetails(username, password).subscribe(data => {
+    this.Auth.getUserDetails(email, password).subscribe(data => {
       if(data.success) {
-        this.router.navigate(['admin'])
+        window.alert(data.message)
+        this.router.navigate(['dashboard'])
+        this.Auth.setLoggedIn(true)
       } else {
-        window.alert(data)
+        window.alert(data.message)
       }
     })
-  console.log(username, password)
+  console.log(email, password)
 }
 
 }

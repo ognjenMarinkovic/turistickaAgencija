@@ -23,6 +23,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { AuthGuard } from './auth.guard';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { AuthService } from './services/auth.service';
     PlaceUpdateComponent,
     LoginComponent,
     AdminComponent,
-    LogoutComponent
+    LogoutComponent,
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     FormsModule,
