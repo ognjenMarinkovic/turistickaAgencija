@@ -17,6 +17,12 @@ import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
 import { PlaceTableComponent } from './place-table/place-table.component';
 import { PlaceUpdateComponent } from './place-update/place-update.component';
+import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthGuard } from './auth.guard';
+import { UserService } from './services/user.service';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,10 @@ import { PlaceUpdateComponent } from './place-update/place-update.component';
     MapaComponent,
     AddPlaceFormComponent,
     PlaceTableComponent,
-    PlaceUpdateComponent
+    PlaceUpdateComponent,
+    LoginComponent,
+    AdminComponent,
+    LogoutComponent
   ],
   imports: [
     FormsModule,
@@ -42,7 +51,7 @@ import { PlaceUpdateComponent } from './place-update/place-update.component';
       apiKey: 'AIzaSyDdCvAo9HztNq7CFBRcid3l8ap8bEiGM3E'}),
       HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService, UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

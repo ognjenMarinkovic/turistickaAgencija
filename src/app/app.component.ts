@@ -8,6 +8,7 @@ import { routerTransition } from './routing.animation';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  records = []
   getState(outlet) {
     return outlet.activatedRouteData.state
     }
