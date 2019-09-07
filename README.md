@@ -33,5 +33,9 @@ Run mongod, then mongo
 ## Node
 run npx node
 
+##JSON SERVER
+npm install json-server --save-dev
+ng run json-server
+
 ##Angular
 ng start
