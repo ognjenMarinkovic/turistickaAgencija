@@ -36,6 +36,9 @@ a {
 .dropdown-item {
     color: $second_color;
 }
+.dropdown-item:hover {
+    color: $primary_color;
+}
 
 .navbar-toggler {
     margin-left: 1rem;
