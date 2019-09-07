@@ -28,10 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## Mongo DB
-Run mongod, then mongo
+mongod,
+then mongo
 
 ## Node
-run npx node
+npx node
+node index.js
 
 ##JSON SERVER
 npm install json-server --save-dev
