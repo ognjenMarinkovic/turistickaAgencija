@@ -1,3 +1,4 @@
+@import "../variable.scss";
 h1 {
     padding: 20px;
     text-align: center;
@@ -25,4 +26,19 @@ h1 {
 .button:hover {
     background: white;
     color: black;
+}
+.h3-responsive, p{
+    border: 2px;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+.toom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 0px 0px;
+    background-color: $fourth_color;
+    color: $second_color;
+}
+h2{
+    font-size: 20px;
 }

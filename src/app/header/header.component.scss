@@ -1,10 +1,12 @@
-$primary_color: #000;
-$second_color: #fff;
+@import '../variable';
 
-a {
+a{
     font-weight: 600;
+    color: $second_color;
 }
-
+a:hover{
+    color: $third_color; 
+}
 .brand-wrapper {
     background-color: $primary_color;
     display: flex;
@@ -15,10 +17,11 @@ a {
 }
 
 .navbar {
+    z-index: 500;
     width: 100%;
-    background-color: $second_color;
+    background-color: $primary_color;
     position: fixed;
-    z-index: 1;
+    
     padding: 0;
 }
 
@@ -29,16 +32,6 @@ a {
     padding: 15px 5px 15px 15px;
 }
 
-.dropdown-menu {
-    background-color: $primary_color;
-}
-
-.dropdown-item {
-    color: $second_color;
-}
-.dropdown-item:hover {
-    color: $primary_color;
-}
 
 .navbar-toggler {
     margin-left: 1rem;

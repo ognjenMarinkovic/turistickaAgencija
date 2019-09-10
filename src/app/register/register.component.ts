@@ -23,11 +23,12 @@ export class RegisterComponent implements OnInit {
     const cpassword = target.querySelector('#cpassword').value
 
     if (password != cpassword) {
-      errors.push("Passwords doesnt match.")
+      window.alert("Passwords doesnt match.")
+      
     }
     if(errors.length == 0){
       this.auth.registerUser(email,password).subscribe(data => {
-        console.log(data)
+        window.alert(data.message)
         if(data.success){
           this.router.navigate(['dashboard'])
         }

@@ -1,4 +1,7 @@
-
+@import "variable.scss";
+*{
+    background-color: $primary_color;
+}
 main{
     padding-top: 75px;
 }
