@@ -37,7 +37,7 @@ node index.js
 
 ##JSON SERVER
 npm install json-server --save-dev
-ng run json-server
+npm run json-server
 
 ##Angular
 ng start
