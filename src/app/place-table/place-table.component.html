@@ -1,6 +1,6 @@
 <div style="overflow-x:auto;" >
-  <table class="table table-striped w-auto">
-    <thead class="thead-dark">
+  <table class="table w-auto">
+    <thead >
       <tr>
         <th>Name</th>
         <th>Location</th>
@@ -20,8 +20,8 @@
         <td >{{place.url}}</td>
         <td >{{place.link}}</td>
         <td>
-        <button class="edit" [routerLink]="['/updateplace/',place.id]">Edit</button>
-        <button class="delete" (click)="deletePlace(place.id)">Delete</button>
+        <button class="btn btn-success edit" [routerLink]="['/updateplace/',place.id]">Edit</button>
+        <button class="btn btn-danger delete" (click)="deletePlace(place.id)">Delete</button>
         </td>
       </tr>
     </tbody>

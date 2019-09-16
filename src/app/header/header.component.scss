@@ -8,6 +8,7 @@ a:hover{
     color: $third_color; 
 }
 .brand-wrapper {
+    color: $second_color;
     background-color: $primary_color;
     display: flex;
     /* establish flex container */
@@ -27,7 +28,6 @@ a:hover{
 
 .navbar-brand {
     font-size: 30px;
-    color: $second_color;
     margin-right: 0px;
     padding: 15px 5px 15px 15px;
 }

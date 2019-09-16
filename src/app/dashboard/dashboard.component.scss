@@ -1,5 +1,9 @@
+@import '../variable.scss';
+
 #message {
     display: flex;
+    background-color: $primary_color;
+    color: $second_color;
     font-size: 40px;
     justify-content: center;
     align-items: center;
@@ -12,11 +16,10 @@
 .button {
     position: relative;
     padding: 20px;
-    color: white;
+    color: black;
     font-size: 20px;
     border-radius: 10px;
-    background: black;
-    border: 1px solid black;
+    background: $second_color;
     text-decoration: none;
     margin: 20px;
 }

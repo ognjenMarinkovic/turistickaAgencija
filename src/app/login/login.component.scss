@@ -1,3 +1,7 @@
+@import '../variable.scss';
+h2{
+    color: $second_color;
+}
 .container {
     position: relative;
     height: calc(100vh - 75px);
@@ -10,4 +14,13 @@
 
 .form-control.ng-touched.ng-invalid {
     border: 2px solid red;
+}
+
+
+.form-control{
+    background-color: $second_color;
+}
+::placeholder{
+    color: black;
+    opacity: 100%;
 }

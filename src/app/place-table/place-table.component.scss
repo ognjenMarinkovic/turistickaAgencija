@@ -1,0 +1,13 @@
+@import '../variable.scss';
+
+td {
+    color: $primary_color;
+    background-color: white;
+}
+td:hover{
+    background-color: #dfdfdf;
+}
+
+thead {
+    background-color: $second_color;
+}

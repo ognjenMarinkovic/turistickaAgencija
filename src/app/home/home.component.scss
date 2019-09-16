@@ -1,4 +1,5 @@
 @import "../variable.scss";
+
 h1 {
     padding: 20px;
     text-align: center;
@@ -27,11 +28,14 @@ h1 {
     background: white;
     color: black;
 }
-.h3-responsive, p{
+
+.h3-responsive,
+p {
     border: 2px;
     text-shadow: black 0.1em 0.1em 0.2em
 }
-.toom{
+
+.toom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +43,38 @@ h1 {
     background-color: $fourth_color;
     color: $second_color;
 }
-h2{
-    font-size: 20px;
+
+.carousel-title {
+    position: absolute;
+    right: 15%;
+    top: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.gradientback-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to top,
+            rgba(44, 95, 45, 1),
+            rgba(255, 0, 0, 0))
+}
+
+.gradientback-top {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 9;
+    height: 200px;
+    background: linear-gradient(to bottom,
+            rgba(44, 95, 45, 1),
+            rgba(255, 0, 0, 0))
 }
